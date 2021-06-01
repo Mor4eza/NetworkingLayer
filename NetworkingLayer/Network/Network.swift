@@ -7,14 +7,27 @@
 
 import Foundation
 
-class Network {
+protocol NetworkClient {
+    var session: URLSession { get }
+    func request<T: Requestable>(req: T, _ completion: @escaping (Result<T.ResponseType, Error>) -> Void)
+}
+
+class Network: NetworkClient {
     
-    static let shared = Network()
+    var session: URLSession
+    
+    init(configuration: URLSessionConfiguration) {
+        self.session = URLSession(configuration: configuration)
+    }
+    
+    convenience init() {
+        self.init(configuration: .default)
+    }
     
     func request<T: Requestable>(req: T, _ completion: @escaping (Result<T.ResponseType, Error>) -> Void) {
         
         let request = prepareRequest(req)
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
+        session.dataTask(with: request) { (data, response, error) in
             
             if let error = error {
                 completion(.failure(error))

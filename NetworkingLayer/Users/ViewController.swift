@@ -32,7 +32,8 @@ class ViewController: UIViewController {
         tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         tableView.delegate = self
         tableView.dataSource = self
-        Network.shared.request(req: EmployeeRequest()) { result in
+        
+        Network().request(req: EmployeeRequest()) { result in
             switch result {
                 case .success(let employee):
                     print(employee.message)
