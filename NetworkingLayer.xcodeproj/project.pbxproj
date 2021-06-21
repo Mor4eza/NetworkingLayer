@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		726748B72659716B00D7E9CB /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726748B62659716B00D7E9CB /* UsersViewModel.swift */; };
+		726C294F2680750A001DAECF /* AddEmployeeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726C294E2680750A001DAECF /* AddEmployeeRequest.swift */; };
 		727DFF2226590DCE00AF670D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727DFF2126590DCE00AF670D /* AppDelegate.swift */; };
 		727DFF2426590DCE00AF670D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727DFF2326590DCE00AF670D /* SceneDelegate.swift */; };
 		727DFF2626590DCE00AF670D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727DFF2526590DCE00AF670D /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		726748B62659716B00D7E9CB /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		726C294E2680750A001DAECF /* AddEmployeeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeRequest.swift; sourceTree = "<group>"; };
 		727DFF1E26590DCE00AF670D /* NetworkingLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		727DFF2126590DCE00AF670D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		727DFF2326590DCE00AF670D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				727DFF422659223400AF670D /* EmployeeResponse.swift */,
 				726748B62659716B00D7E9CB /* UsersViewModel.swift */,
 				727DFF2526590DCE00AF670D /* ViewController.swift */,
+				726C294E2680750A001DAECF /* AddEmployeeRequest.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				727DFF3B26590E0E00AF670D /* Requestable.swift in Sources */,
 				727DFF2626590DCE00AF670D /* ViewController.swift in Sources */,
 				727DFF3F26591D1800AF670D /* EmployeeRequest.swift in Sources */,
+				726C294F2680750A001DAECF /* AddEmployeeRequest.swift in Sources */,
 				727DFF2226590DCE00AF670D /* AppDelegate.swift in Sources */,
 				727DFF3826590DF200AF670D /* Network.swift in Sources */,
 				726748B72659716B00D7E9CB /* UsersViewModel.swift in Sources */,

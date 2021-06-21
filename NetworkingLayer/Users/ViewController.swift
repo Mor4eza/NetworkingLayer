@@ -33,6 +33,9 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addEmployee))
+        navigationItem.rightBarButtonItem = addButton
+        
         Network().request(req: EmployeeRequest()) { result in
             switch result {
                 case .success(let employee):
@@ -46,6 +49,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @objc func addEmployee() {
+        let addRequest = AddEmployeeRequest(name: "morteza", salary: "120000", age: "27")
+        
+        Network().request(req: addRequest) { result in
+            switch result {
+            case .success(let employee):
+                print(employee.data)
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 
 }
 

@@ -38,9 +38,12 @@ class Network: NetworkClient {
                 if response.statusCode == 200 {
                     if let data = data {
                         let decoder = JSONDecoder()
-                        let decodedRespose = try? decoder.decode(T.ResponseType.self, from: data)
-                        DispatchQueue.main.async {
-                            completion(.success(decodedRespose!))
+                        if let decodedRespose = try? decoder.decode(T.ResponseType.self, from: data) {
+                            DispatchQueue.main.async {
+                                completion(.success(decodedRespose))
+                            }
+                        } else {
+                            completion(.failure(NSError(domain: "serializeError", code: -1, userInfo: ["serializedError": -1])))
                         }
                     }
                 } else {
